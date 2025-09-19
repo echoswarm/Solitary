@@ -9,7 +9,21 @@
       "Bash(git push:*)",
       "Read(//c/Users/quinn/GameMakerProjects/RPG/objects/oPlayer/**)",
       "Bash(python:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(pip install:*)",
+      "Bash(copy:*)",
+      "Read(//c/Users/quinn/GameMakerProjects/Trinketeer/**)",
+      "Bash(for file in C:/Users/quinn/GameMakerProjects/Solitary/sprites/*/*.yy)",
+      "Bash(do echo \"Checking: $file\")",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(for dir in */)",
+      "Bash(do echo \"=== $dir ===\")",
+      "Bash(for file in sprites/*/*.yy)",
+      "Bash(do python -m json.tool \"$file\")",
+      "Bash(/dev/null)",
+      "Bash(echo:*)",
+      "Bash(for:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,149 +1,88 @@
 {
-  "$GMSprite": "",
-  "%Name": "spr_yard_tileset",
-  "bboxMode": 0,
-  "bbox_bottom": 255,
-  "bbox_left": 0,
-  "bbox_right": 255,
-  "bbox_top": 0,
-  "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {
-      "$GMSpriteFrame": "",
-      "%Name": "a90bb97f-a409-4129-8119-f06f0ea1e0cf",
-      "name": "a90bb97f-a409-4129-8119-f06f0ea1e0cf",
-      "resourceType": "GMSpriteFrame",
-      "resourceVersion": "2.0"
-    }
+  "$GMSprite":"",
+  "%Name":"spr_yard_tileset",
+  "bboxMode":0,
+  "bbox_bottom":255,
+  "bbox_left":0,
+  "bbox_right":255,
+  "bbox_top":0,
+  "collisionKind":1,
+  "collisionTolerance":0,
+  "DynamicTexturePage":false,
+  "edgeFiltering":false,
+  "For3D":false,
+  "frames":[
+    {"$GMSpriteFrame":"","%Name":"a90bb97f-a409-4129-8119-f06f0ea1e0cf","name":"a90bb97f-a409-4129-8119-f06f0ea1e0cf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 256,
-  "HTile": false,
-  "layers": [
-    {
-      "$GMImageLayer": "",
-      "%Name": "7bb3063c-5e4b-4c7e-9bbe-41f1727ef7ce",
-      "blendMode": 0,
-      "displayName": "default",
-      "isLocked": false,
-      "name": "7bb3063c-5e4b-4c7e-9bbe-41f1727ef7ce",
-      "opacity": 100.0,
-      "resourceType": "GMImageLayer",
-      "resourceVersion": "2.0",
-      "visible": true
-    }
+  "gridX":0,
+  "gridY":0,
+  "height":256,
+  "HTile":false,
+  "layers":[
+    {"$GMImageLayer":"","%Name":"7bb3063c-5e4b-4c7e-9bbe-41f1727ef7ce","blendMode":0,"displayName":"default","isLocked":false,"name":"7bb3063c-5e4b-4c7e-9bbe-41f1727ef7ce","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name": "spr_yard_tileset",
-  "nineSlice": null,
-  "origin": 0,
-  "originX": 0,
-  "originY": 0,
-  "parent": {
-    "name": "Environment",
-    "path": "folders/Sprites/Environment.yy"
+  "name":"spr_yard_tileset",
+  "nineSlice":null,
+  "origin":0,
+  "parent":{
+    "name":"Environment",
+    "path":"folders/Sprites/Environment.yy",
   },
-  "preMultiplyAlpha": false,
-  "resourceType": "GMSprite",
-  "resourceVersion": "2.0",
-  "sequence": {
-    "$GMSequence": "",
-    "%Name": "spr_yard_tileset",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {
-      "$GMEventList": "",
-      "Keyframes": [],
-      "resourceType": "GMEventList",
-      "resourceVersion": "2.0"
+  "preMultiplyAlpha":false,
+  "resourceType":"GMSprite",
+  "resourceVersion":"2.0",
+  "sequence":{
+    "$GMSequence":"v1",
+    "%Name":"spr_yard_tileset",
+    "autoRecord":true,
+    "backdropHeight":768,
+    "backdropImageOpacity":0.5,
+    "backdropImagePath":"",
+    "backdropWidth":1366,
+    "backdropXOffset":0.0,
+    "backdropYOffset":0.0,
+    "events":{
+      "$KeyframeStore<MessageEventKeyframe>":"",
+      "Keyframes":[],
+      "resourceType":"KeyframeStore<MessageEventKeyframe>",
+      "resourceVersion":"2.0",
     },
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 1.0,
-    "lockOrigin": false,
-    "moments": {
-      "$GMMomentList": "",
-      "Keyframes": [],
-      "resourceType": "GMMomentList",
-      "resourceVersion": "2.0"
+    "eventStubScript":null,
+    "eventToFunction":{},
+    "length":1.0,
+    "lockOrigin":false,
+    "moments":{
+      "$KeyframeStore<MomentsEventKeyframe>":"",
+      "Keyframes":[],
+      "resourceType":"KeyframeStore<MomentsEventKeyframe>",
+      "resourceVersion":"2.0",
     },
-    "name": "spr_yard_tileset",
-    "playback": 1,
-    "playbackSpeed": 30.0,
-    "playbackSpeedType": 0,
-    "resourceType": "GMSequence",
-    "resourceVersion": "2.0",
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {
-        "$GMSpriteFramesTrack": "",
-        "builtinName": 0,
-        "events": [],
-        "inheritsTrackColour": true,
-        "interpolation": 1,
-        "isCreationTrack": false,
-        "keyframes": {
-          "$KeyframeStore<SpriteFrameKeyframe>": "",
-          "Keyframes": [
-            {
-              "$Keyframe<SpriteFrameKeyframe>": "",
-              "Channels": {
-                "0": {
-                  "$SpriteFrameKeyframe": "",
-                  "Id": {
-                    "name": "a90bb97f-a409-4129-8119-f06f0ea1e0cf",
-                    "path": "sprites/spr_yard_tileset/spr_yard_tileset.yy"
-                  },
-                  "resourceType": "SpriteFrameKeyframe",
-                  "resourceVersion": "2.0"
-                }
-              },
-              "Disabled": false,
-              "id": "cbd34bf9-bf8e-4d7a-a686-5ea2a9e96c20",
-              "IsCreationKey": false,
-              "Key": 0.0,
-              "Length": 1.0,
-              "resourceType": "Keyframe<SpriteFrameKeyframe>",
-              "resourceVersion": "2.0",
-              "Stretch": false
-            }
-          ],
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
-          "resourceVersion": "2.0"
-        },
-        "modifiers": [],
-        "name": "frames",
-        "resourceType": "GMSpriteFramesTrack",
-        "resourceVersion": "2.0",
-        "spriteId": null,
-        "trackColour": 0,
-        "tracks": [],
-        "traits": 0
-      }
+    "name":"spr_yard_tileset",
+    "playback":1,
+    "playbackSpeed":30.0,
+    "playbackSpeedType":0,
+    "resourceType":"GMSequence",
+    "resourceVersion":"2.0",
+    "showBackdrop":true,
+    "showBackdropImage":false,
+    "timeUnits":1,
+    "tracks":[
+      {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a90bb97f-a409-4129-8119-f06f0ea1e0cf","path":"sprites/spr_yard_tileset/spr_yard_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cbd34bf9-bf8e-4d7a-a686-5ea2a9e96c20","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+          ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0
+    "visibleRange":null,
+    "volume":1.0,
+    "xorigin":0,
+    "yorigin":0,
   },
-  "swatchColours": null,
-  "swfPrecision": 0.5,
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default"
+  "swatchColours":null,
+  "swfPrecision":0.5,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
   },
-  "type": 0,
-  "VTile": false,
-  "width": 256
+  "type":0,
+  "VTile":false,
+  "width":256,
 }

@@ -1,15 +1,12 @@
 {
-  "$GMTileSet": "",
+  "$GMTileSet":"v1",
   "%Name": "ts_cell",
   "autoTileSets": [],
-  "macroPageTiles": {
-    "$GMTileListData": "",
-    "SerialiseHeight": 0,
-    "SerialiseWidth": 0,
-    "TileCompressedData": [],
-    "TileDataFormat": 1,
-    "resourceType": "GMTileListData",
-    "resourceVersion": "2.0"
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileCompressedData":[],
+    "TileDataFormat":1,
   },
   "name": "ts_cell",
   "out_columns": 8,
