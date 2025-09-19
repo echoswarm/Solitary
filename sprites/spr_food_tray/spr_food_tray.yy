@@ -1,0 +1,149 @@
+{
+  "$GMSprite": "",
+  "%Name": "spr_food_tray",
+  "bboxMode": 0,
+  "bbox_bottom": 15,
+  "bbox_left": 0,
+  "bbox_right": 15,
+  "bbox_top": 0,
+  "collisionKind": 1,
+  "collisionTolerance": 0,
+  "DynamicTexturePage": false,
+  "edgeFiltering": false,
+  "For3D": false,
+  "frames": [
+    {
+      "$GMSpriteFrame": "",
+      "%Name": "bbf0af3c-78f3-41a8-8c2e-2d751676e084",
+      "name": "bbf0af3c-78f3-41a8-8c2e-2d751676e084",
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "2.0"
+    }
+  ],
+  "gridX": 0,
+  "gridY": 0,
+  "height": 16,
+  "HTile": false,
+  "layers": [
+    {
+      "$GMImageLayer": "",
+      "%Name": "51f4e35b-99e9-463e-90bd-bf8b54fd1316",
+      "blendMode": 0,
+      "displayName": "default",
+      "isLocked": false,
+      "name": "51f4e35b-99e9-463e-90bd-bf8b54fd1316",
+      "opacity": 100.0,
+      "resourceType": "GMImageLayer",
+      "resourceVersion": "2.0",
+      "visible": true
+    }
+  ],
+  "name": "spr_food_tray",
+  "nineSlice": null,
+  "origin": 4,
+  "originX": 8,
+  "originY": 8,
+  "parent": {
+    "name": "Items",
+    "path": "folders/Sprites/Items.yy"
+  },
+  "preMultiplyAlpha": false,
+  "resourceType": "GMSprite",
+  "resourceVersion": "2.0",
+  "sequence": {
+    "$GMSequence": "",
+    "%Name": "spr_food_tray",
+    "autoRecord": true,
+    "backdropHeight": 768,
+    "backdropImageOpacity": 0.5,
+    "backdropImagePath": "",
+    "backdropWidth": 1366,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "events": {
+      "$GMEventList": "",
+      "Keyframes": [],
+      "resourceType": "GMEventList",
+      "resourceVersion": "2.0"
+    },
+    "eventStubScript": null,
+    "eventToFunction": {},
+    "length": 1.0,
+    "lockOrigin": false,
+    "moments": {
+      "$GMMomentList": "",
+      "Keyframes": [],
+      "resourceType": "GMMomentList",
+      "resourceVersion": "2.0"
+    },
+    "name": "spr_food_tray",
+    "playback": 1,
+    "playbackSpeed": 30.0,
+    "playbackSpeedType": 0,
+    "resourceType": "GMSequence",
+    "resourceVersion": "2.0",
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "timeUnits": 1,
+    "tracks": [
+      {
+        "$GMSpriteFramesTrack": "",
+        "builtinName": 0,
+        "events": [],
+        "inheritsTrackColour": true,
+        "interpolation": 1,
+        "isCreationTrack": false,
+        "keyframes": {
+          "$KeyframeStore<SpriteFrameKeyframe>": "",
+          "Keyframes": [
+            {
+              "$Keyframe<SpriteFrameKeyframe>": "",
+              "Channels": {
+                "0": {
+                  "$SpriteFrameKeyframe": "",
+                  "Id": {
+                    "name": "bbf0af3c-78f3-41a8-8c2e-2d751676e084",
+                    "path": "sprites/spr_food_tray/spr_food_tray.yy"
+                  },
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "2.0"
+                }
+              },
+              "Disabled": false,
+              "id": "95843f43-7c7a-4701-ba86-e799a7d17c5d",
+              "IsCreationKey": false,
+              "Key": 0.0,
+              "Length": 1.0,
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "2.0",
+              "Stretch": false
+            }
+          ],
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "resourceVersion": "2.0"
+        },
+        "modifiers": [],
+        "name": "frames",
+        "resourceType": "GMSpriteFramesTrack",
+        "resourceVersion": "2.0",
+        "spriteId": null,
+        "trackColour": 0,
+        "tracks": [],
+        "traits": 0
+      }
+    ],
+    "visibleRange": null,
+    "volume": 1.0,
+    "xorigin": 8,
+    "yorigin": 8
+  },
+  "swatchColours": null,
+  "swfPrecision": 0.5,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default"
+  },
+  "type": 0,
+  "VTile": false,
+  "width": 16
+}
