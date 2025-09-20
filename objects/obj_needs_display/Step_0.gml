@@ -10,9 +10,9 @@ if (!instance_exists(obj_schedule_display)) {
 }
 
 // Check if hour changed
-var current_hour = obj_time_system.hours;
-if (current_hour != last_hour && !obj_time_system.paused) {
-    last_hour = current_hour;
+var hour_check = obj_time_system.game_hour;
+if (hour_check != last_hour && !obj_time_system.paused) {
+    last_hour = hour_check;
 
     // Apply decay
     hunger = max(0, hunger - hunger_decay);
@@ -20,14 +20,14 @@ if (current_hour != last_hour && !obj_time_system.paused) {
 
     // Check current activity and apply restoration
     if (instance_exists(obj_schedule_display)) {
-        var current_activity = obj_schedule_display.schedule[current_hour];
+        var activity_check = obj_schedule_display.schedule[hour_check];
 
         // Restore needs based on activity
-        if (current_activity == Activity.EAT) {
+        if (activity_check == Activity.EAT) {
             hunger = min(100, hunger + hunger_restore);
         }
 
-        if (current_activity == Activity.CLEAN) {
+        if (activity_check == Activity.CLEAN) {
             cleanliness = min(100, cleanliness + cleanliness_restore);
         }
     }

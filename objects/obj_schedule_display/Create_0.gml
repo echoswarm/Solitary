@@ -65,8 +65,8 @@ block_height = 20;
 blocks_per_row = 12; // Display 12 hours per row
 
 // Current activity tracking
-current_hour = 0;
-current_activity = Activity.SLEEP;
+game_hour = 0;
+game_activity = Activity.SLEEP;
 
 // Reference to time system
 time_system = noone;

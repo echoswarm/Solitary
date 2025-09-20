@@ -6,8 +6,8 @@ if (!instance_exists(obj_time_system)) {
 }
 
 if (instance_exists(obj_time_system)) {
-    current_hour = obj_time_system.hours;
-    current_activity = schedule[current_hour];
+    game_hour = obj_time_system.game_hour;
+    game_activity = schedule[game_hour];
 }
 
 // Draw schedule title
@@ -15,10 +15,10 @@ draw_set_color(c_white);
 draw_text(display_x, display_y - 25, "Daily Schedule");
 
 // Draw current activity prominently
-draw_set_color(activity_colors[current_activity]);
+draw_set_color(activity_colors[game_activity]);
 draw_rectangle(display_x, display_y - 5, display_x + 200, display_y + 25, false);
 draw_set_color(c_white);
-draw_text(display_x + 5, display_y, "Current: " + activity_names[current_activity] + " (" + string(current_hour) + ":00)");
+draw_text(display_x + 5, display_y, "Current: " + activity_names[game_activity] + " (" + string(game_hour) + ":00)");
 
 // Draw schedule grid
 var grid_y = display_y + 40;
@@ -33,7 +33,7 @@ for (var i = 0; i < 24; i++) {
     draw_rectangle(block_x, block_y, block_x + block_width, block_y + block_height, false);
 
     // Highlight current hour
-    if (i == current_hour) {
+    if (i == game_hour) {
         draw_set_color(c_white);
         draw_rectangle(block_x - 2, block_y - 2, block_x + block_width + 2, block_y + block_height + 2, true);
         draw_rectangle(block_x - 1, block_y - 1, block_x + block_width + 1, block_y + block_height + 1, true);
