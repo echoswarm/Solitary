@@ -16,8 +16,10 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-// Draw money amount with $ symbol prefix
-draw_text(display_x, display_y, "$" + string(money));
+// Draw money amount with cents formatting (e.g. $0.00)
+var money_text = "$" + string(floor(money / 100)) + "." + string_format(money mod 100, 2, 0);
+money_text = string_replace(money_text, " ", "0"); // Replace spaces with zeros for proper formatting
+draw_text(display_x, display_y, money_text);
 
 // Reset draw settings
 draw_set_halign(fa_left);

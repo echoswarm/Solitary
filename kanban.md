@@ -8,18 +8,20 @@ This kanban board tracks all development tasks for the Solitary GameMaker projec
 ### Major Milestone: UI Visibility Crisis RESOLVED ✓
 **Achievement**: All critical UI elements now display correctly with proper positioning and visibility
 - Clock: Dynamic centering with semi-transparent background
-- Money: Consistent top-right positioning
+- Money: Fixed formatting to show $10.00 instead of just $ symbol
 - Schedule: Bottom-left grid with legend and current activity highlighting
 - Needs: Color-coded bars with warning flashes and tooltip system
 - Cleanup: Removed duplicate UI instances causing conflicts
+- Debug Tools: Added F9 key for runtime diagnostics and troubleshooting
 
 ### Current Focus: Foundation Systems Implementation
 **Next Priority**: Time System (SOL-001) and Save/Load System (SOL-003)
-**Sprint Status**: Day 3 of Sprint 3 - UI fixes complete, moving to core systems
+**Sprint Status**: Day 3 of Sprint 3 - UI fixes enhanced, moving to core systems
 
 ### Technical Debt Status: MINIMAL
-- UI rendering architecture now stable
-- Object hierarchy properly managed
+- UI rendering architecture now stable with Layer-based object management
+- Object hierarchy properly managed on UI_Layer
+- Debug infrastructure in place for troubleshooting
 - No known critical bugs blocking development
 
 ## Workflow States
@@ -181,6 +183,16 @@ Finished tasks with all acceptance criteria met
   - Assigned: gamemaker-ide-specialist
 
 ### ✅ COMPLETE
+
+- **UI-006: Enhanced UI Layer Management and Debug Tools** ✓
+  - Epic: UI Polish & Fixes
+  - Moved all UI objects to dedicated UI_Layer for proper rendering order
+  - Fixed money display formatting to show proper currency format ($10.00)
+  - Implemented F9 debug key for runtime diagnostics and troubleshooting
+  - Enhanced UI object hierarchy management and layer-based rendering
+  - Resolved UI object placement conflicts through proper layer management
+  - Completed: 2025-09-19 Day 3
+  - All acceptance criteria met
 
 - **UI-001: Clock Display Visibility Fix** ✓
   - Epic: UI Polish & Fixes
@@ -430,8 +442,8 @@ Finished tasks with all acceptance criteria met
 
 ### Epic: UI Polish & Fixes
 **Description**: Critical UI visibility and positioning fixes
-**Tasks**: UI-001, UI-002, UI-003, UI-004, UI-005
-**Status**: Completed 2025-09-19
+**Tasks**: UI-001, UI-002, UI-003, UI-004, UI-005, UI-006
+**Status**: Completed 2025-09-19 (Enhanced with debug tools)
 **Priority**: High (Critical for playability)
 
 ### Epic: Polish & UX

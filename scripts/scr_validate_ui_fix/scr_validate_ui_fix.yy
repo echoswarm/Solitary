@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_validate_ui_fix",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_validate_ui_fix",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
