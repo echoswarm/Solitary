@@ -145,39 +145,73 @@ Finished tasks with all acceptance criteria met
 
 ### 🚀 IN PROGRESS
 
-- **IDE-001: Complete IDE Setup Phase 1-10**
-  - Epic: Project Setup
-  - Phase 1: Workflow Validation - STARTING NOW
-  - Phase 2: Core Controllers Creation
-  - Phase 3: Character Objects Setup
-  - Phase 4: Interactive Objects
-  - Phase 5: UI Display Objects
-  - Phase 6: Room Structure with Layers
-  - Phase 7: Tileset Implementation
-  - Phase 8: Script Organization
-  - Phase 9: Object Placement
-  - Phase 10: Final Validation
-  - Estimated: 2 hours
-  - Priority: Must-Have (P0 - Blocker)
+- **SPRINT3-001: Character Visibility Fix**
+  - Epic: Sprint 3 GML Implementation
+  - Fix obj_inmate and obj_guard Draw events
+  - Add draw_self() to make characters visible
+  - Verify sprite assignments
+  - Estimated: 30 minutes
+  - Priority: CRITICAL (P0 - Blocker)
   - Dependencies: None
   - Started: 2025-09-19
   - Acceptance Criteria:
-    - All objects created in IDE
-    - Room layers properly structured
-    - Scripts organized in folders
-    - Project compiles without errors
-    - All placeholder assets in place
+    - Inmate visible in cell
+    - Guard visible at station
+    - Sprites display correctly
+
+- **SPRINT3-002: Door Animation Fix**
+  - Epic: Sprint 3 GML Implementation
+  - Stop continuous animation loop
+  - Add image_speed = 0 in Create event
+  - Implement interaction system
+  - Estimated: 30 minutes
+  - Priority: HIGH (P1)
+  - Dependencies: None
+  - Started: 2025-09-19
+  - Acceptance Criteria:
+    - Doors static by default
+    - Can interact with E key
+    - Open/close states work
+
+- **SPRINT3-003: Clock Display Implementation**
+  - Epic: Sprint 3 GML Implementation
+  - Add time display to Draw_64.gml
+  - Show "Day X - HH:MM" format
+  - Position at top center
+  - Estimated: 1 hour
+  - Priority: HIGH (P1)
+  - Dependencies: None
+  - Started: 2025-09-19
+  - Acceptance Criteria:
+    - Clock visible on screen
+    - Shows current day and time
+    - Updates every frame
 
 ### 👀 REVIEW
 
-- **INIT-004: GameMaker Object Creation and Sync**
-  - Create test object in GameMaker
-  - Validate .yyp synchronization
-  - Ensure Asset Browser registration
-  - Status: Pending validation
-  - Assigned: gamemaker-project-sync
+- **IDE-001: Complete IDE Setup Phase 1-10**
+  - Epic: Project Setup
+  - All 10 phases completed
+  - All objects created in IDE
+  - Room fully designed with prison layout
+  - All sprites and objects placed
+  - Issues found:
+    - Characters not visible when running
+    - Doors animating continuously
+    - Clock has no display
+  - Completed: 2025-09-19
+  - Status: Awaiting GML implementation
+  - Assigned: gamemaker-ide-specialist
 
 ### ✅ COMPLETE
+
+- **INIT-004: GameMaker Object Creation and Sync** ✓
+  - Created all game objects in IDE
+  - Validated .yyp synchronization
+  - Asset Browser fully populated
+  - Room design complete
+  - Completed: 2025-09-19
+  - Assigned: gamemaker-project-sync
 
 - **INIT-001: Documentation Setup** ✓
   - Created claude.md with orchestrator instructions
@@ -222,12 +256,68 @@ Finished tasks with all acceptance criteria met
 2. SOL-002: Game Controller (Day 2-3)
 3. SOL-003: Save/Load System (Day 4-5)
 
-### Sprint 3: Core Gameplay (Week 2)
-**Goal**: Implement the core gameplay loop
+### Sprint 3: GML Implementation Phase (CURRENT)
+**Goal**: Implement all GML scripts and core system logic
+**Duration**: 5 days
+**Started**: 2025-09-19
+**Priority Order** (by dependency):
+
+#### Day 1: Foundation Scripts
+1. **scr_game_states** - State machine implementation
+   - menu_state(), playing_state(), paused_state(), gameover_state()
+   - State transition functions
+   - Initialize/cleanup for each state
+
+2. **scr_time_functions** - Time management
+   - advance_time(), pause_time(), resume_time()
+   - get_current_hour(), get_current_day()
+   - format_time_display()
+
+#### Day 2: Data Management
+3. **scr_save_load** - Persistence layer
+   - save_game_state(), load_game_state()
+   - auto_save(), delete_save()
+   - serialize/deserialize functions
+
+#### Day 3: Gameplay Systems
+4. **scr_needs_system** - Needs management
+   - update_needs(), decay_hunger(), decay_cleanliness()
+   - restore_need(), check_critical_needs()
+   - get_need_percentage()
+
+5. **scr_movement** - Player movement
+   - move_player(), check_collision()
+   - grid_based_movement()
+   - interact_with_object()
+
+#### Day 4: New Core Scripts
+6. **scr_schedule_system** (NEW) - Daily schedule
+   - get_current_activity(), check_schedule()
+   - is_activity_allowed(), force_activity()
+   - update_schedule_display()
+
+7. **scr_interaction_system** (NEW) - Object interactions
+   - check_interaction_range(), execute_interaction()
+   - door_interaction(), food_interaction()
+   - activity_interaction()
+
+#### Day 5: AI and Polish
+8. **scr_ai_behavior** (NEW) - Guard AI
+   - patrol_behavior(), chase_behavior()
+   - check_line_of_sight(), alert_nearby_guards()
+   - return_to_post()
+
+9. **scr_ui_functions** (NEW) - UI helpers
+   - update_all_displays(), show_notification()
+   - animate_bar(), flash_warning()
+   - format_money_display()
+
+### Sprint 3.5: Core Gameplay Integration (Week 2)
+**Goal**: Connect all systems and implement gameplay loop
 **Duration**: 5 days
 **Planned Tasks**:
-1. SOL-004: Schedule System (Day 6-7)
-2. SOL-005: Needs System (Day 8-9)
+1. SOL-004: Schedule System Integration (Day 6-7)
+2. SOL-005: Needs System Integration (Day 8-9)
 3. SOL-006: Win/Loss Conditions (Day 10)
 
 ### Sprint 4: Economy & Polish

@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ui_panel",
+    "path":"sprites/spr_ui_panel/spr_ui_panel.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
