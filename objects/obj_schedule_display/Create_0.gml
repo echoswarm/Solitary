@@ -62,7 +62,7 @@ schedule[23] = Activity.SLEEP; // 23:00
 
 // Display settings (bottom-left position, moved higher to avoid UI overlap)
 display_x = 20;
-display_y = 400;  // Moved higher to avoid panel overlap
+display_y = 300;  // Moved higher up for better visibility
 block_width = 50;
 block_height = 20;
 blocks_per_row = 12; // Display 12 hours per row

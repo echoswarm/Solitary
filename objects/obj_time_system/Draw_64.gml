@@ -1,5 +1,11 @@
 // obj_time_system Draw GUI Event
 
+// Draw semi-transparent background for clock visibility
+draw_set_alpha(0.7);
+draw_set_color(c_black);
+draw_rectangle(540, 20, 740, 50, false);
+draw_set_alpha(1);
+
 // Draw time display at top center - ensure visibility
 draw_set_color(c_white);
 draw_set_halign(fa_center);

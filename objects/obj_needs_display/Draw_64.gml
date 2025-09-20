@@ -7,13 +7,15 @@ var hover_inmate = noone;
 // Convert GUI mouse position to world position
 var gui_mouse_x = device_mouse_x_to_gui(0);
 var gui_mouse_y = device_mouse_y_to_gui(0);
-var world_mouse_x = gui_mouse_x;
-var world_mouse_y = gui_mouse_y;
 
 // Check all inmates
 with (obj_inmate) {
-    // Check if mouse is over this inmate (using world coordinates)
-    if (point_distance(x, y, mouse_x, mouse_y) < 32) {
+    // Convert inmate position to screen coordinates (accounting for view)
+    var inmate_screen_x = x - view_xview[0];
+    var inmate_screen_y = y - view_yview[0];
+
+    // Check if mouse is over this inmate (accounting for 2x scale)
+    if (point_distance(gui_mouse_x, gui_mouse_y, inmate_screen_x, inmate_screen_y) < 64) {
         other.mouse_over_inmate = true;
         other.hover_inmate = id;
         break;
