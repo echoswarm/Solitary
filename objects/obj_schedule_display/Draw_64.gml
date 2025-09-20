@@ -24,8 +24,13 @@ var gui_height = display_get_gui_height();
 display_x = 20;
 display_y = ui_controller.schedule_y_current;
 
+// Only draw if schedule is on-screen (when expanded or animating to expanded)
+if (display_y >= gui_height) {
+    return; // Don't draw if completely off-screen
+}
+
 // Calculate what to show based on expansion state
-var show_full_schedule = ui_controller.ui_expanded || ui_controller.anim_active;
+var show_full_schedule = ui_controller.ui_expanded || (ui_controller.anim_active && ui_controller.anim_target_expanded);
 
 // Calculate background height based on what we're showing
 var bg_height = 40; // Height for just current activity
@@ -108,6 +113,11 @@ if (show_full_schedule) {
 
     draw_set_alpha(1);
 }
+
+// DEBUG: Show schedule position
+draw_set_color(c_yellow);
+draw_set_alpha(1);
+draw_text(10, 30, "Schedule Debug: Y=" + string(display_y) + " Expanded=" + string(ui_controller.ui_expanded));
 
 // Reset alignment
 draw_set_halign(fa_left);

@@ -58,6 +58,7 @@
     {"id":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_prison_main","path":"rooms/rm_prison_main/rm_prison_main.yy",},},
+    {"id":{"name":"scr_debug_ui_visibility","path":"scripts/scr_debug_ui_visibility/scr_debug_ui_visibility.yy",},},
     {"id":{"name":"scr_debug_ui","path":"scripts/scr_debug_ui/scr_debug_ui.yy",},},
     {"id":{"name":"scr_game_states","path":"scripts/scr_game_states/scr_game_states.yy",},},
     {"id":{"name":"scr_movement","path":"scripts/scr_movement/scr_movement.yy",},},

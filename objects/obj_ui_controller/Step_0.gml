@@ -28,8 +28,8 @@ if (anim_active) {
     var gui_width = display_get_gui_width();
 
     // Schedule display animation (slides up from bottom)
-    schedule_y_collapsed = gui_height - 60;  // Only show current activity line
-    schedule_y_expanded = gui_height - 280;   // Show full schedule
+    schedule_y_collapsed = gui_height + 10;  // Off-screen when collapsed (clock stays visible at top)
+    schedule_y_expanded = gui_height - 280;   // Show full schedule pushing clock up
 
     if (anim_target_expanded) {
         // Animating to expanded
@@ -62,8 +62,8 @@ if (anim_active) {
     var gui_height = display_get_gui_height();
     var gui_width = display_get_gui_width();
 
-    schedule_y_collapsed = gui_height - 60;
-    schedule_y_expanded = gui_height - 280;
+    schedule_y_collapsed = gui_height + 10;  // Off-screen when collapsed
+    schedule_y_expanded = gui_height - 280;  // Visible when expanded
     needs_x_collapsed = gui_width + 50;
     needs_x_expanded = gui_width - 250;
 

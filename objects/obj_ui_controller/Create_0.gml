@@ -18,12 +18,16 @@ anim_target_expanded = false; // Target state for animation
 // Animation progress (0 to 1)
 anim_progress = 0;
 
-// Schedule display animation positions
-schedule_y_collapsed = 0;  // Will be set based on GUI height
-schedule_y_expanded = 0;   // Will be set based on GUI height
-schedule_y_current = 0;    // Current Y position
+// Get initial GUI dimensions
+var gui_height = display_get_gui_height();
+var gui_width = display_get_gui_width();
 
-// Needs display animation positions
-needs_x_collapsed = 0;  // Will be set based on GUI width (off-screen)
-needs_x_expanded = 0;   // Will be set based on GUI width
-needs_x_current = 0;    // Current X position
+// Schedule display animation positions - schedule slides up from bottom
+schedule_y_collapsed = gui_height + 10;  // Just off-screen when collapsed (only clock visible)
+schedule_y_expanded = gui_height - 280;   // Show full schedule when expanded
+schedule_y_current = schedule_y_collapsed;    // Start collapsed (off-screen)
+
+// Needs display animation positions - slides in from right
+needs_x_collapsed = gui_width + 50;  // Off-screen right when collapsed
+needs_x_expanded = gui_width - 250;  // Visible position when expanded
+needs_x_current = needs_x_collapsed;    // Start collapsed (off-screen)
