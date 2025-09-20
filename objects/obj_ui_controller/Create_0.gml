@@ -1,14 +1,12 @@
 // obj_ui_controller Create Event
 
-// This object manages the top UI panel and coordinates other UI elements
-// Panel dimensions
-panel_height = 60;
-panel_width = 1280;
+// This object manages UI element visibility and animations
+// Currently only handles needs display animation on TAB press
 
-// UI expansion state (toggled with TAB)
+// UI expansion state (toggled with TAB) - only affects needs display now
 ui_expanded = false;
 
-// Animation parameters
+// Animation parameters for needs display
 anim_duration = 0.3; // Animation duration in seconds
 anim_timer = 0;      // Current animation timer
 anim_active = false; // Whether animation is active
@@ -21,11 +19,6 @@ anim_progress = 0;
 // Get initial GUI dimensions
 var gui_height = display_get_gui_height();
 var gui_width = display_get_gui_width();
-
-// Schedule display animation positions - schedule slides up from bottom
-schedule_y_collapsed = gui_height + 10;  // Just off-screen when collapsed (only clock visible)
-schedule_y_expanded = gui_height - 280;   // Show full schedule when expanded
-schedule_y_current = schedule_y_collapsed;    // Start collapsed (off-screen)
 
 // Needs display animation positions - slides in from right
 needs_x_collapsed = gui_width + 50;  // Off-screen right when collapsed
