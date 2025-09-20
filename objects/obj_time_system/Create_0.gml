@@ -10,9 +10,9 @@ max_days = 5; // Win condition
 time_accumulator = 0;
 seconds_per_minute = 1;
 
-// Display position
-clock_x = room_width / 2;
-clock_y = 32;
+// Display position (centered on top UI bar)
+clock_x = 640;
+clock_y = 20;
 
 // Game state
 paused = false;

@@ -1,14 +1,13 @@
 // obj_needs_display Draw GUI Event
 
-// Draw needs title
-draw_set_color(c_white);
-draw_text(display_x, display_y - 25, "Inmate Needs");
+// No title needed for top bar display
 
 // Helper function to draw a need bar
 var draw_need_bar = function(_x, _y, _value, _label, _is_critical) {
-    // Draw label
+    // Draw label (compact for top bar)
     draw_set_color(c_white);
-    draw_text(_x, _y - 15, _label + ": " + string(floor(_value)) + "%");
+    draw_set_font(-1);
+    draw_text(_x, _y - 12, _label + ": " + string(floor(_value)) + "%");
 
     // Draw bar background (empty bar)
     draw_set_color(c_gray);
@@ -39,21 +38,24 @@ var draw_need_bar = function(_x, _y, _value, _label, _is_critical) {
     draw_rectangle(_x, _y, _x + bar_width, _y + bar_height, true);
 };
 
-// Draw hunger bar
-var hunger_y = display_y;
+// Adjust bar size for top panel
+bar_width = 100;
+bar_height = 15;
+
+// Draw hunger bar horizontally
+var hunger_x = display_x;
+var hunger_y = display_y + 15;
 var is_hunger_critical = hunger < warning_threshold;
-draw_need_bar(display_x, hunger_y, hunger, "Hunger", is_hunger_critical);
+draw_need_bar(hunger_x, hunger_y, hunger, "Hunger", is_hunger_critical);
 
-// Draw cleanliness bar
-var cleanliness_y = display_y + bar_height + bar_spacing;
+// Draw cleanliness bar horizontally next to hunger
+var cleanliness_x = display_x + bar_width + 30;
+var cleanliness_y = display_y + 15;
 var is_clean_critical = cleanliness < warning_threshold;
-draw_need_bar(display_x, cleanliness_y, cleanliness, "Cleanliness", is_clean_critical);
+draw_need_bar(cleanliness_x, cleanliness_y, cleanliness, "Clean", is_clean_critical);
 
-// Draw warning messages if needed
+// Warning indicators drawn as small text next to bars if critical
 if (hunger < critical_threshold || cleanliness < critical_threshold) {
     draw_set_color(c_red);
-    draw_text(display_x, cleanliness_y + bar_height + 20, "CRITICAL CONDITION!");
-} else if (hunger < warning_threshold || cleanliness < warning_threshold) {
-    draw_set_color(c_yellow);
-    draw_text(display_x, cleanliness_y + bar_height + 20, "Warning: Needs Low");
+    draw_text(display_x + bar_width * 2 + 60, display_y + 20, "CRITICAL!");
 }

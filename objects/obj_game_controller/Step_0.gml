@@ -18,36 +18,10 @@ switch(current_state) {
 
     case GameState.PLAYING:
         // Playing state - game is running
-        // ESC to pause
-        if (keyboard_check_pressed(vk_escape) && pause_allowed) {
-            previous_state = current_state;
-            current_state = GameState.PAUSED;
-
-            // Pause time system
-            if (instance_exists(obj_time_system)) {
-                with(obj_time_system) {
-                    paused = true;
-                }
-            }
-        }
+        // No pausing in this game - removed ESC key check
 
         // Check for game over conditions
         // This will be expanded when needs system is implemented
-        break;
-
-    case GameState.PAUSED:
-        // Paused state - game is suspended
-        // ESC to unpause
-        if (keyboard_check_pressed(vk_escape)) {
-            current_state = previous_state;
-
-            // Resume time system
-            if (instance_exists(obj_time_system)) {
-                with(obj_time_system) {
-                    paused = false;
-                }
-            }
-        }
         break;
 
     case GameState.GAMEOVER:
@@ -63,8 +37,6 @@ switch(current_state) {
 // Update subsystems based on state
 if (current_state == GameState.PLAYING) {
     // All systems run normally when playing
-} else if (current_state == GameState.PAUSED) {
-    // Most systems are paused
 } else if (current_state == GameState.MENU || current_state == GameState.GAMEOVER) {
     // Systems are idle or showing UI only
 }

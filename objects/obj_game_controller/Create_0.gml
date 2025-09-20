@@ -1,10 +1,9 @@
 // obj_game_controller Create Event
 
-// Game states enumeration
+// Game states enumeration (no pause in this game)
 enum GameState {
     MENU,
     PLAYING,
-    PAUSED,
     GAMEOVER
 }
 
@@ -14,7 +13,7 @@ previous_state = GameState.PLAYING;
 
 // Game flags
 game_initialized = false;
-pause_allowed = true;
+// No pausing in this game
 
 // Initialize subsystems references
 time_system = noone;

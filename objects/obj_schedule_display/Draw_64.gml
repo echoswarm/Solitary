@@ -1,5 +1,8 @@
 // obj_schedule_display Draw GUI Event
 
+// Only draw if visible (we set visible=false to hide sprite)
+// But still draw the GUI schedule grid
+
 // Get current hour from time system
 if (!instance_exists(obj_time_system)) {
     time_system = instance_find(obj_time_system, 0);

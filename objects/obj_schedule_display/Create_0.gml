@@ -1,5 +1,8 @@
 // obj_schedule_display Create Event
 
+// Hide the sprite object in top-right (only show the grid display on bottom-left)
+visible = false;
+
 // Define activities
 enum Activity {
     SLEEP,
@@ -57,9 +60,9 @@ schedule[21] = Activity.FREE;  // 21:00
 schedule[22] = Activity.SLEEP; // 22:00
 schedule[23] = Activity.SLEEP; // 23:00
 
-// Display settings
+// Display settings (bottom-left position)
 display_x = 20;
-display_y = 100;
+display_y = 470;  // Fixed position near bottom (720 - 250)
 block_width = 50;
 block_height = 20;
 blocks_per_row = 12; // Display 12 hours per row
