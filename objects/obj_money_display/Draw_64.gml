@@ -1,5 +1,8 @@
 // obj_money_display Draw GUI Event
 
+// Debug: Log that Draw GUI is running
+show_debug_message("[MONEY] Draw GUI event executing at frame " + string(current_time));
+
 // Position at top-left corner
 var display_x = 20;  // 20 pixels from left edge
 var display_y = 20;  // 20 pixels from top edge

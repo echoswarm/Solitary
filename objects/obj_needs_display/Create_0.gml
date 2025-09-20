@@ -1,7 +1,11 @@
 // obj_needs_display Create Event
 
-// Hide sprite in the room (we only want to draw in GUI layer)
-visible = false;
+// IMPORTANT: Keep object visible for Draw GUI event to work!
+// Setting visible = false prevents ALL draw events from executing
+visible = true;
+
+// Hide the sprite itself (but keep Draw GUI active)
+sprite_index = -1;
 
 // Initialize needs values
 hunger = 100;        // 100 = fully satisfied, 0 = starving
@@ -36,5 +40,4 @@ schedule_display = noone;
 // Last hour tracked (for decay)
 last_hour = -1;
 
-// Keep object visible so Draw GUI event runs
-visible = true;
+// Already set visible = true above

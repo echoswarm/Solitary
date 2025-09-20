@@ -1,6 +1,9 @@
 // obj_schedule_display Draw GUI Event
 // Schedule always visible at fixed position (bottom-left)
 
+// Debug: Log that Draw GUI is running
+show_debug_message("[SCHEDULE] Draw GUI event executing at frame " + string(current_time));
+
 // Get current hour from time system
 if (!instance_exists(obj_time_system)) {
     time_system = instance_find(obj_time_system, 0);

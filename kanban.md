@@ -5,24 +5,28 @@ This kanban board tracks all development tasks for the Solitary GameMaker projec
 
 ## Current Project Status (2025-09-20 Day 4)
 
-### Major Milestone: UI Simplification and Static Display COMPLETED ✓
-**Achievement**: Simplified UI system with static schedule display and focused TAB interaction
+### Major Milestone: UI Visibility Crisis RESOLVED ✓
+**Critical Achievement**: Discovered and fixed fundamental GameMaker UI visibility issue
+- **ROOT CAUSE IDENTIFIED**: visible=false blocks ALL draw events, including Draw_64 (GUI layer)
+- **SOLUTION IMPLEMENTED**: visible=true + sprite_index=-1 for UI objects without sprites
 - Clock: Always visible, static positioning for consistent visibility
-- Money: Repositioned to top-left with icon display ($ symbol removed for cleaner look)
-- Schedule: Restored to static display, always visible for better gameplay awareness
+- Money: Now properly visible at top-left with icon display (was completely invisible)
+- Schedule: Now properly visible at bottom-left, static display for gameplay awareness
 - Needs: TAB-toggleable slider bars with color-coding, warning flashes and tooltip system
-- Cleanup: Removed duplicate UI instances causing conflicts
-- Debug Tools: Enhanced with F1 key for advanced runtime diagnostics (upgraded from F9)
-- **LATEST**: UI Display Fixes - Removed extra coin sprites, fixed schedule visibility, improved positioning
+- Debug Tools: Enhanced with F1 key + NEW F10 key for UI visibility diagnostics
+- **TECHNICAL DEBT ELIMINATED**: No more invisible UI elements, comprehensive debugging added
+- **LATEST**: Critical UI Visibility Fix - All UI elements now properly visible and functional
 
 ### Current Focus: Foundation Systems Implementation
 **Next Priority**: Time System (SOL-001) and Save/Load System (SOL-003)
 **Sprint Status**: Day 4 of Sprint 3 - UI simplification complete, moving to core systems
 
-### Technical Debt Status: MINIMAL
-- UI rendering architecture now stable with Layer-based object management
-- Object hierarchy properly managed on UI_Layer
-- Debug infrastructure in place for troubleshooting
+### Technical Debt Status: ELIMINATED
+- **MAJOR ISSUE RESOLVED**: UI visibility crisis caused by incorrect visible property usage
+- UI rendering architecture now stable with proper visible=true + sprite_index=-1 pattern
+- Object hierarchy properly managed on UI_Layer with correct visibility settings
+- Comprehensive debug infrastructure in place (F1 + F10 diagnostics)
+- **GameMaker Knowledge Gap CLOSED**: Team now understands visible property behavior
 - No known critical bugs blocking development
 
 ## Workflow States
@@ -185,6 +189,22 @@ Finished tasks with all acceptance criteria met
 
 ### ✅ COMPLETE
 
+- **UI-012: Critical UI Visibility Fix - GameMaker visible Property Discovery** ✓
+  - Epic: UI Polish & Fixes
+  - **CRITICAL DISCOVERY**: visible=false prevents ALL drawing including Draw_64 events
+  - **ROOT CAUSE**: Money and schedule displays were invisible due to visible=false blocking Draw GUI
+  - **SOLUTION**: Changed to visible=true with sprite_index=-1 for all UI objects
+  - Fixed obj_money_display: visible=true; sprite_index=-1; (was visible=false)
+  - Fixed obj_schedule_display: visible=true; sprite_index=-1; (was visible=false)
+  - Fixed obj_needs_display: visible=true; sprite_index=-1; (removed conflicting settings)
+  - Added comprehensive debugging script scr_verify_ui_visibility for future diagnostics
+  - Implemented F10 hotkey for real-time UI visibility verification and reporting
+  - **KEY LESSON**: To hide sprite but keep Draw_64 active: use visible=true + sprite_index=-1
+  - **IMPACT**: Resolved complete UI invisibility issue, restored all UI displays
+  - Enhanced debugging infrastructure for future UI troubleshooting
+  - Completed: 2025-09-20 Day 4 (Latest - Critical Fix)
+  - All acceptance criteria met
+
 - **UI-011: UI Display Fixes and Sprite Cleanup** ✓
   - Epic: UI Polish & Fixes
   - Removed extra coin sprite from game room by setting visible = false on obj_money_display
@@ -194,7 +214,7 @@ Finished tasks with all acceptance criteria met
   - Ensured all UI elements only render in Draw_64 (GUI layer) for proper layering
   - Eliminated duplicate UI sprites appearing in the game room
   - Enhanced visual clarity by restricting UI rendering to GUI layer only
-  - Completed: 2025-09-20 Day 4 (Latest)
+  - Completed: 2025-09-20 Day 4 (Superseded by UI-012)
   - All acceptance criteria met
 
 - **UI-010: Schedule Simplification and Static Display** ✓
@@ -502,9 +522,10 @@ Finished tasks with all acceptance criteria met
 
 ### Epic: UI Polish & Fixes
 **Description**: Critical UI visibility and positioning fixes
-**Tasks**: UI-001, UI-002, UI-003, UI-004, UI-005, UI-006, UI-007, UI-008, UI-009, UI-010
-**Status**: Completed 2025-09-20 (Schedule simplification and static display system)
-**Priority**: High (Critical for playability)
+**Tasks**: UI-001, UI-002, UI-003, UI-004, UI-005, UI-006, UI-007, UI-008, UI-009, UI-010, UI-011, UI-012
+**Status**: COMPLETED 2025-09-20 (Critical visibility fix resolved fundamental GameMaker issue)
+**Priority**: High (Critical for playability) - RESOLVED
+**Impact**: Discovered and documented visible=false vs sprite_index=-1 pattern for future development
 
 ### Epic: Polish & UX
 **Description**: Visual feedback, audio, and quality of life improvements

@@ -1,5 +1,8 @@
 // obj_needs_display Draw GUI Event
 
+// Debug: Log that Draw GUI is running
+show_debug_message("[NEEDS] Draw GUI event executing at frame " + string(current_time));
+
 // Get UI controller for animation state
 var ui_controller = instance_find(obj_ui_controller, 0);
 if (!instance_exists(ui_controller)) {

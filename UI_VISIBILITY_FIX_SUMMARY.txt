@@ -1,0 +1,63 @@
+UI VISIBILITY FIX SUMMARY
+========================
+
+PROBLEM IDENTIFIED:
+- Money display and schedule display were not visible in the game
+- Root cause: visible = false was preventing Draw GUI events from executing
+
+GAMEMAKER BEHAVIOR CLARIFICATION:
+- When visible = false: ALL draw events are skipped, including Draw GUI
+- When visible = true with sprite_index = -1: Object is active but sprite is not drawn
+
+FIXES APPLIED:
+
+1. obj_money_display (Create_0.gml):
+   - Changed from: visible = false
+   - Changed to: visible = true; sprite_index = -1;
+   - Added debug logging in Draw_64.gml
+
+2. obj_schedule_display (Create_0.gml):
+   - Changed from: visible = false
+   - Changed to: visible = true; sprite_index = -1;
+   - Added debug logging in Draw_64.gml
+
+3. obj_needs_display (Create_0.gml):
+   - Removed conflicting visible settings
+   - Set to: visible = true; sprite_index = -1;
+   - Added debug logging in Draw_64.gml
+
+DEBUGGING TOOLS ADDED:
+
+1. Script: scr_verify_ui_visibility
+   - Comprehensive verification of all UI objects
+   - Checks visibility, sprite index, and values
+   - Reports GUI dimensions
+
+2. Hotkey: F10 (in obj_game_controller)
+   - Triggers verify_ui_visibility() function
+   - Outputs detailed diagnostic report
+
+TESTING INSTRUCTIONS:
+
+1. Run the game
+2. The UI elements should now be visible:
+   - Money display (top-left)
+   - Schedule display (bottom-left)
+   - Needs display (animated from right)
+
+3. Press F10 to run UI visibility verification
+4. Check debug console for:
+   - "[MONEY] Draw GUI event executing..." messages
+   - "[SCHEDULE] Draw GUI event executing..." messages
+   - "[NEEDS] Draw GUI event executing..." messages
+   - Full verification report
+
+KEY LESSON:
+In GameMaker, to have an object that:
+- Executes Draw GUI events
+- But doesn't draw its sprite in the room
+
+Use: visible = true; sprite_index = -1;
+NOT: visible = false;
+
+This ensures Draw GUI events run while hiding the sprite.
