@@ -1,18 +1,18 @@
 // obj_ui_controller Step Event
 
-// Handle TAB key press to toggle needs display only
+// Handle TAB key press to toggle both needs and schedule displays
 if (keyboard_check_pressed(vk_tab)) {
     // Toggle the state
     ui_expanded = !ui_expanded;
 
-    // Start animation for needs display
+    // Start animation for both displays
     anim_active = true;
     anim_timer = 0;
     anim_start_expanded = !ui_expanded; // Previous state
     anim_target_expanded = ui_expanded;  // New state
 }
 
-// Update animation for needs display only
+// Update animation for both displays
 if (anim_active) {
     // Advance timer
     anim_timer += delta_time / 1000000; // Convert microseconds to seconds
@@ -38,6 +38,18 @@ if (anim_active) {
         needs_x_current = lerp(needs_x_expanded, needs_x_collapsed, eased_progress);
     }
 
+    // Schedule display animation (slides in from left)
+    schedule_x_collapsed = -650;  // Off-screen left
+    schedule_x_expanded = 20;     // Visible position
+
+    if (anim_target_expanded) {
+        // Animating to expanded
+        schedule_x_current = lerp(schedule_x_collapsed, schedule_x_expanded, eased_progress);
+    } else {
+        // Animating to collapsed
+        schedule_x_current = lerp(schedule_x_expanded, schedule_x_collapsed, eased_progress);
+    }
+
     // Check if animation is complete
     if (anim_progress >= 1) {
         anim_active = false;
@@ -55,5 +67,15 @@ if (anim_active) {
         needs_x_current = needs_x_expanded;
     } else {
         needs_x_current = needs_x_collapsed;
+    }
+
+    // Schedule display static positions
+    schedule_x_collapsed = -650;
+    schedule_x_expanded = 20;
+
+    if (ui_expanded) {
+        schedule_x_current = schedule_x_expanded;
+    } else {
+        schedule_x_current = schedule_x_collapsed;
     }
 }

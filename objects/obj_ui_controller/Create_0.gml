@@ -24,3 +24,8 @@ var gui_width = display_get_gui_width();
 needs_x_collapsed = gui_width + 50;  // Off-screen right when collapsed
 needs_x_expanded = gui_width - 250;  // Visible position when expanded
 needs_x_current = needs_x_collapsed;    // Start collapsed (off-screen)
+
+// Schedule display animation positions - slides in from left
+schedule_x_collapsed = -650;  // Off-screen left when collapsed
+schedule_x_expanded = 20;     // Visible position when expanded
+schedule_x_current = schedule_x_collapsed;  // Start collapsed (off-screen)

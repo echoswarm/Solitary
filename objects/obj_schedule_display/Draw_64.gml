@@ -18,8 +18,12 @@ if (instance_exists(obj_time_system)) {
 var gui_width = display_get_gui_width();
 var gui_height = display_get_gui_height();
 
-// Fixed position at bottom-left (adjusted for proper visibility)
-display_x = 20;
+// Get animated X position from UI controller
+if (instance_exists(obj_ui_controller)) {
+    display_x = obj_ui_controller.schedule_x_current;
+} else {
+    display_x = -650; // Default to off-screen if no UI controller
+}
 display_y = gui_height - 200; // Reduced offset to ensure visibility
 
 // Draw semi-transparent background for visibility (adjusted height)
