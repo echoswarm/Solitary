@@ -145,6 +145,29 @@ Finished tasks with all acceptance criteria met
 
 ### 🚀 IN PROGRESS
 
+- **IDE-001: Complete IDE Setup Phase 1-10**
+  - Epic: Project Setup
+  - Phase 1: Workflow Validation - STARTING NOW
+  - Phase 2: Core Controllers Creation
+  - Phase 3: Character Objects Setup
+  - Phase 4: Interactive Objects
+  - Phase 5: UI Display Objects
+  - Phase 6: Room Structure with Layers
+  - Phase 7: Tileset Implementation
+  - Phase 8: Script Organization
+  - Phase 9: Object Placement
+  - Phase 10: Final Validation
+  - Estimated: 2 hours
+  - Priority: Must-Have (P0 - Blocker)
+  - Dependencies: None
+  - Started: 2025-09-19
+  - Acceptance Criteria:
+    - All objects created in IDE
+    - Room layers properly structured
+    - Scripts organized in folders
+    - Project compiles without errors
+    - All placeholder assets in place
+
 ### 👀 REVIEW
 
 - **INIT-004: GameMaker Object Creation and Sync**
