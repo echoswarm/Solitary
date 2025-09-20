@@ -20,9 +20,9 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
-// Position text next to the icon (assuming icon is 32x32)
-var text_x = display_x + 40;
-var text_y = display_y + 16; // Center vertically with icon
+// Position text next to the icon with more spacing (assuming icon is 32x32)
+var text_x = display_x + 35;  // Move left a bit (was 40)
+var text_y = display_y + 12;  // Move up a bit (was 16)
 
 draw_text(text_x, text_y, string(money));
 

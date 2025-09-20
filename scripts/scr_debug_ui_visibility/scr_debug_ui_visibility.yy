@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_debug_ui_visibility",
   "isCompatibility":false,
   "isDnD":false,
@@ -9,5 +9,5 @@
     "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
-  "resourceVersion":"2.0"
+  "resourceVersion":"2.0",
 }

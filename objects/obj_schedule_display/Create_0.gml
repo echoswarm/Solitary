@@ -1,7 +1,7 @@
 // obj_schedule_display Create Event
 
-// Keep object visible so Draw GUI event runs
-visible = true;
+// Hide sprite (set visible = false) but keep object active for Draw GUI
+visible = false;
 
 // Define activities
 enum Activity {
