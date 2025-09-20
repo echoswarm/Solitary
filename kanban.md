@@ -13,7 +13,7 @@ This kanban board tracks all development tasks for the Solitary GameMaker projec
 - Needs: TAB-toggleable slider bars with color-coding, warning flashes and tooltip system
 - Cleanup: Removed duplicate UI instances causing conflicts
 - Debug Tools: Enhanced with F1 key for advanced runtime diagnostics (upgraded from F9)
-- **LATEST**: Schedule Animation Removed - Static display with TAB-only needs toggle for simplified UX
+- **LATEST**: UI Display Fixes - Removed extra coin sprites, fixed schedule visibility, improved positioning
 
 ### Current Focus: Foundation Systems Implementation
 **Next Priority**: Time System (SOL-001) and Save/Load System (SOL-003)
@@ -184,6 +184,18 @@ Finished tasks with all acceptance criteria met
   - Assigned: gamemaker-ide-specialist
 
 ### ✅ COMPLETE
+
+- **UI-011: UI Display Fixes and Sprite Cleanup** ✓
+  - Epic: UI Polish & Fixes
+  - Removed extra coin sprite from game room by setting visible = false on obj_money_display
+  - Fixed schedule visibility by adjusting display position from (gui_height - 280) to (gui_height - 200)
+  - Improved money icon positioning with proper sprite validation and coordinate adjustments
+  - Added visible = false to obj_needs_display to prevent sprite rendering in game room
+  - Ensured all UI elements only render in Draw_64 (GUI layer) for proper layering
+  - Eliminated duplicate UI sprites appearing in the game room
+  - Enhanced visual clarity by restricting UI rendering to GUI layer only
+  - Completed: 2025-09-20 Day 4 (Latest)
+  - All acceptance criteria met
 
 - **UI-010: Schedule Simplification and Static Display** ✓
   - Epic: UI Polish & Fixes

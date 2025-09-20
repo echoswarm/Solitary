@@ -29,7 +29,8 @@
       "Bash(C:ProgramDataGameMakerStudio2Cacheruntimesruntime-2024.8.1.218binIgor.exe -options=C:UsersquinnAppDataLocalGameMakerStudio2GMS2TEMPbuild.bff -- Windows Run)",
       "Bash(cmd /c:*)",
       "Bash(find:*)",
-      "Bash(awk:*)"
+      "Bash(awk:*)",
+      "Bash(while read file)"
     ],
     "deny": [],
     "ask": []
