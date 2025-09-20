@@ -1,0 +1,1 @@
+// Time system functions - placeholder

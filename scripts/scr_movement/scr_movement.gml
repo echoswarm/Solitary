@@ -1,0 +1,1 @@
+// Movement utility functions - placeholder

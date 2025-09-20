@@ -1,0 +1,1 @@
+// obj_money_display Draw GUI Event

@@ -23,7 +23,9 @@
       "Bash(do python -m json.tool \"$file\")",
       "Bash(/dev/null)",
       "Bash(echo:*)",
-      "Bash(for:*)"
+      "Bash(for:*)",
+      "Bash(findstr:*)",
+      "Bash(gamemaker-project-sync:*)"
     ],
     "deny": [],
     "ask": []
