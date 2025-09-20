@@ -145,38 +145,6 @@ Finished tasks with all acceptance criteria met
 
 ### 🚀 IN PROGRESS
 
-- **SOL-002: Game State Controller**
-  - Epic: Foundation Systems
-  - Create obj_game_controller
-  - Implement state machine (Menu/Playing/Paused/End)
-  - Set up main game loop
-  - Handle system updates each tick
-  - Estimated: 4 hours
-  - Priority: Must-Have (P1)
-  - Dependencies: None
-  - Started: 2025-09-19 Day 2
-  - Acceptance Criteria:
-    - All states transition correctly
-    - Systems update in correct order
-    - No memory leaks between states
-    - Proper initialization/cleanup
-
-- **SOL-004: Daily Schedule System**
-  - Epic: Core Gameplay
-  - Create obj_schedule_system
-  - Implement 24-hour schedule grid
-  - Fixed activities (Sleep/Eat/Clean/Yard/Free)
-  - Visual schedule display with current activity
-  - Estimated: 4 hours
-  - Priority: Must-Have (P2)
-  - Dependencies: Time System
-  - Started: 2025-09-19 Day 2
-  - Acceptance Criteria:
-    - Schedule triggers at correct hours
-    - Current activity clearly indicated
-    - All activities have defined time slots
-    - Visual grid shows full day schedule
-
 ### 👀 REVIEW
 
 - **IDE-001: Complete IDE Setup Phase 1-10**
@@ -194,6 +162,35 @@ Finished tasks with all acceptance criteria met
   - Assigned: gamemaker-ide-specialist
 
 ### ✅ COMPLETE
+
+- **SOL-002: Game State Controller** ✓
+  - Epic: Foundation Systems
+  - Implemented full state machine (Menu/Playing/Paused/End)
+  - ESC key pauses/unpauses game
+  - Pause overlay shows during pause state
+  - Game over state triggers from needs system
+  - Completed: 2025-09-19 Day 2
+  - All acceptance criteria met
+
+- **SOL-004: Daily Schedule System** ✓
+  - Epic: Core Gameplay
+  - Implemented 24-hour schedule grid display
+  - Color-coded activities (Sleep/Eat/Clean/Yard/Free/Work)
+  - Current activity highlighted and shown prominently
+  - Visual legend for all activity types
+  - Completed: 2025-09-19 Day 2
+  - All acceptance criteria met
+
+- **Basic Needs Display** ✓
+  - Implemented hunger and cleanliness bars
+  - Bars positioned below clock on right side
+  - Color coding: green (good), yellow (warning <20), red (critical <5)
+  - Flash animation for critical states
+  - Percentage values shown
+  - Needs decay at correct rates per hour
+  - Activities restore needs correctly (Eat +60, Clean +70)
+  - Game over triggers when any need hits 0
+  - Completed: 2025-09-19 Day 2
 
 - **SPRINT3-001: Character Visibility Fix** ✓
   - Epic: Sprint 3 GML Implementation
