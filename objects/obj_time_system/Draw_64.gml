@@ -1,6 +1,6 @@
 // obj_time_system Draw GUI Event
 
-// Draw time display at top center
+// Draw time display at top center - ensure visibility
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
@@ -14,8 +14,8 @@ if (game_minute < 10) minute_str = "0" + minute_str;
 
 var time_text = "Day " + string(game_day) + " - " + hour_str + ":" + minute_str;
 
-// Draw text directly (simple, no background)
-draw_text(clock_x, clock_y, time_text);
+// Draw with explicit position at top center
+draw_text(640, 30, time_text);
 
 // Reset draw settings
 draw_set_halign(fa_left);

@@ -60,9 +60,9 @@ schedule[21] = Activity.FREE;  // 21:00
 schedule[22] = Activity.SLEEP; // 22:00
 schedule[23] = Activity.SLEEP; // 23:00
 
-// Display settings (bottom-left position)
+// Display settings (bottom-left position, moved higher to avoid UI overlap)
 display_x = 20;
-display_y = 470;  // Fixed position near bottom (720 - 250)
+display_y = 400;  // Moved higher to avoid panel overlap
 block_width = 50;
 block_height = 20;
 blocks_per_row = 12; // Display 12 hours per row

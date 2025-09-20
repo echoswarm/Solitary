@@ -1,18 +1,54 @@
 // obj_needs_display Draw GUI Event
 
-// Simple bars for hunger and cleanliness
-draw_set_color(c_white);
+// Check if mouse is hovering over an inmate
+var mouse_over_inmate = false;
+var hover_inmate = noone;
 
-// Draw hunger bar
-var hunger_label = "Hunger: " + string(floor(hunger)) + "%";
-draw_text(display_x, display_y, hunger_label);
+// Convert GUI mouse position to world position
+var gui_mouse_x = device_mouse_x_to_gui(0);
+var gui_mouse_y = device_mouse_y_to_gui(0);
+var world_mouse_x = gui_mouse_x;
+var world_mouse_y = gui_mouse_y;
 
-// Draw hunger bar background
-draw_set_color(c_gray);
-draw_rectangle(display_x, display_y + 15, display_x + bar_width, display_y + 15 + bar_height, false);
+// Check all inmates
+with (obj_inmate) {
+    // Check if mouse is over this inmate (using world coordinates)
+    if (point_distance(x, y, mouse_x, mouse_y) < 32) {
+        other.mouse_over_inmate = true;
+        other.hover_inmate = id;
+        break;
+    }
+}
 
-// Draw hunger bar fill
-if (hunger > 0) {
+// Only draw tooltip if hovering over an inmate
+if (mouse_over_inmate && hover_inmate != noone) {
+    // Calculate tooltip position near mouse
+    var tooltip_x = gui_mouse_x + 20;
+    var tooltip_y = gui_mouse_y - 60;
+
+    // Ensure tooltip stays on screen
+    if (tooltip_x + 150 > display_get_gui_width()) {
+        tooltip_x = gui_mouse_x - 170;
+    }
+    if (tooltip_y < 10) {
+        tooltip_y = gui_mouse_y + 20;
+    }
+
+    // Draw tooltip background
+    draw_set_alpha(0.9);
+    draw_set_color(c_black);
+    draw_rectangle(tooltip_x, tooltip_y, tooltip_x + 150, tooltip_y + 80, false);
+
+    // Draw tooltip border
+    draw_set_alpha(1);
+    draw_set_color(c_white);
+    draw_rectangle(tooltip_x, tooltip_y, tooltip_x + 150, tooltip_y + 80, true);
+
+    // Draw tooltip title
+    draw_text(tooltip_x + 5, tooltip_y + 5, "Inmate Needs:");
+
+    // Draw hunger info
+    var hunger_text = "Hunger: " + string(floor(hunger)) + "%";
     if (hunger < critical_threshold) {
         draw_set_color(c_red);
     } else if (hunger < warning_threshold) {
@@ -20,25 +56,10 @@ if (hunger > 0) {
     } else {
         draw_set_color(c_green);
     }
-    var hunger_fill = (bar_width * hunger) / 100;
-    draw_rectangle(display_x, display_y + 15, display_x + hunger_fill, display_y + 15 + bar_height, false);
-}
+    draw_text(tooltip_x + 5, tooltip_y + 25, hunger_text);
 
-// Draw hunger bar border
-draw_set_color(c_white);
-draw_rectangle(display_x, display_y + 15, display_x + bar_width, display_y + 15 + bar_height, true);
-
-// Draw cleanliness bar (offset below hunger)
-var clean_y = display_y + 35;
-var clean_label = "Clean: " + string(floor(cleanliness)) + "%";
-draw_text(display_x, clean_y, clean_label);
-
-// Draw cleanliness bar background
-draw_set_color(c_gray);
-draw_rectangle(display_x, clean_y + 15, display_x + bar_width, clean_y + 15 + bar_height, false);
-
-// Draw cleanliness bar fill
-if (cleanliness > 0) {
+    // Draw cleanliness info
+    var clean_text = "Clean: " + string(floor(cleanliness)) + "%";
     if (cleanliness < critical_threshold) {
         draw_set_color(c_red);
     } else if (cleanliness < warning_threshold) {
@@ -46,10 +67,9 @@ if (cleanliness > 0) {
     } else {
         draw_set_color(c_green);
     }
-    var clean_fill = (bar_width * cleanliness) / 100;
-    draw_rectangle(display_x, clean_y + 15, display_x + clean_fill, clean_y + 15 + bar_height, false);
-}
+    draw_text(tooltip_x + 5, tooltip_y + 45, clean_text);
 
-// Draw cleanliness bar border
-draw_set_color(c_white);
-draw_rectangle(display_x, clean_y + 15, display_x + bar_width, clean_y + 15 + bar_height, true);
+    // Reset draw settings
+    draw_set_color(c_white);
+    draw_set_alpha(1);
+}
