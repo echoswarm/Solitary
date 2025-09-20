@@ -1,0 +1,33 @@
+UI Fixes Testing Checklist
+==========================
+
+1. EXTRA COIN SPRITE FIX:
+   - Added visible = false to obj_money_display Create event
+   - This prevents the sprite from rendering in the game room
+   - Money should only appear in GUI layer via Draw_64 event
+
+2. SCHEDULE DISPLAY FIX:
+   - Adjusted display_y calculation from (gui_height - 280) to (gui_height - 200)
+   - This should make the schedule visible at bottom-left
+   - Schedule already had visible = false in Create event
+
+3. MONEY ICON POSITIONING:
+   - Updated sprite drawing to check for valid sprite_index
+   - Adjusted icon position to (display_x + 16, display_y + 16)
+   - Text position adjusted to align with icon
+
+4. NEEDS DISPLAY FIX:
+   - Added visible = false to obj_needs_display Create event
+   - Prevents any sprite from showing in game room
+
+All UI elements should now:
+- Only render in Draw_64 (GUI layer)
+- Not show sprites in the game room
+- Be properly positioned on screen
+
+To test:
+1. Run the game
+2. Check that no extra coin sprites appear in the room
+3. Verify schedule is visible at bottom-left
+4. Confirm money display shows correctly at top-left
+5. Check that needs bars display properly on right side

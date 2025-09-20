@@ -1,5 +1,8 @@
 // obj_needs_display Create Event
 
+// Hide sprite in the room (we only want to draw in GUI layer)
+visible = false;
+
 // Initialize needs values
 hunger = 100;        // 100 = fully satisfied, 0 = starving
 cleanliness = 100;   // 100 = clean, 0 = filthy

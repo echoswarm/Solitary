@@ -15,14 +15,14 @@ if (instance_exists(obj_time_system)) {
 var gui_width = display_get_gui_width();
 var gui_height = display_get_gui_height();
 
-// Fixed position at bottom-left
+// Fixed position at bottom-left (adjusted for proper visibility)
 display_x = 20;
-display_y = gui_height - 280;
+display_y = gui_height - 200; // Reduced offset to ensure visibility
 
 // Draw semi-transparent background for visibility
 draw_set_alpha(0.8);
 draw_set_color(c_black);
-draw_rectangle(display_x - 10, display_y - 5, display_x + 620, display_y + 250, false);
+draw_rectangle(display_x - 10, display_y - 5, display_x + 620, display_y + 180, false);
 draw_set_alpha(1);
 
 // Draw current activity
