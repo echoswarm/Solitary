@@ -3,6 +3,5 @@
 // Initialize money
 money = 0;
 
-// Display position (right side of top UI bar)
-display_x = 1200;
-display_y = 30;
+// Display position will be calculated dynamically in Draw event
+// to ensure proper alignment regardless of screen size

@@ -1,5 +1,77 @@
 // obj_needs_display Draw GUI Event
 
+// Get GUI dimensions for positioning
+var gui_width = display_get_gui_width();
+var gui_height = display_get_gui_height();
+
+// Position to the left of money display (top right area)
+var display_x = gui_width - 250;  // Further left than money
+var display_y = 30;
+var bar_width = 80;
+var bar_height = 10;
+var bar_spacing = 30;
+
+// Draw needs bars background
+draw_set_alpha(0.7);
+draw_set_color(c_black);
+draw_rectangle(display_x - 10, display_y - 10, display_x + bar_width + 40, display_y + bar_height * 2 + bar_spacing + 10, false);
+draw_set_alpha(1);
+
+// Draw Hunger Bar
+draw_set_color(c_white);
+draw_text(display_x, display_y - 5, "Hunger:");
+
+// Determine hunger bar color
+if (hunger < critical_threshold) {
+    draw_set_color(c_red);
+} else if (hunger < warning_threshold) {
+    draw_set_color(c_yellow);
+} else {
+    draw_set_color(c_green);
+}
+
+// Flash if in warning state
+if (flash_timer < flash_duration && hunger < warning_threshold) {
+    draw_set_alpha(0.5);
+}
+
+// Draw hunger bar fill
+draw_rectangle(display_x, display_y + 10, display_x + (bar_width * hunger / 100), display_y + 10 + bar_height, false);
+draw_set_alpha(1);
+
+// Draw hunger bar outline
+draw_set_color(c_white);
+draw_rectangle(display_x, display_y + 10, display_x + bar_width, display_y + 10 + bar_height, true);
+
+// Draw Cleanliness Bar
+draw_text(display_x, display_y + bar_spacing - 5, "Clean:");
+
+// Determine cleanliness bar color
+if (cleanliness < critical_threshold) {
+    draw_set_color(c_red);
+} else if (cleanliness < warning_threshold) {
+    draw_set_color(c_yellow);
+} else {
+    draw_set_color(c_green);
+}
+
+// Flash if in warning state
+if (flash_timer < flash_duration && cleanliness < warning_threshold) {
+    draw_set_alpha(0.5);
+}
+
+// Draw cleanliness bar fill
+draw_rectangle(display_x, display_y + bar_spacing + 10, display_x + (bar_width * cleanliness / 100), display_y + bar_spacing + 10 + bar_height, false);
+draw_set_alpha(1);
+
+// Draw cleanliness bar outline
+draw_set_color(c_white);
+draw_rectangle(display_x, display_y + bar_spacing + 10, display_x + bar_width, display_y + bar_spacing + 10 + bar_height, true);
+
+// Reset draw settings
+draw_set_color(c_white);
+draw_set_alpha(1);
+
 // Check if mouse is hovering over an inmate
 var mouse_over_inmate = false;
 var hover_inmate = noone;

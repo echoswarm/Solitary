@@ -3,6 +3,14 @@
 // Only draw if visible (we set visible=false to hide sprite)
 // But still draw the GUI schedule grid
 
+// Get GUI dimensions for proper positioning
+var gui_width = display_get_gui_width();
+var gui_height = display_get_gui_height();
+
+// Position at bottom left of screen
+display_x = 20;
+display_y = gui_height - 200;  // 200 pixels from bottom
+
 // Get current hour from time system
 if (!instance_exists(obj_time_system)) {
     time_system = instance_find(obj_time_system, 0);
@@ -12,6 +20,12 @@ if (instance_exists(obj_time_system)) {
     game_hour = obj_time_system.game_hour;
     game_activity = schedule[game_hour];
 }
+
+// Draw semi-transparent background for visibility
+draw_set_alpha(0.7);
+draw_set_color(c_black);
+draw_rectangle(display_x - 10, display_y - 35, display_x + 620, display_y + 180, false);
+draw_set_alpha(1);
 
 // Draw schedule title
 draw_set_color(c_white);
