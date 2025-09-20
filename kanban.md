@@ -11,11 +11,11 @@ This kanban board tracks all development tasks for the Solitary GameMaker projec
 - **SOLUTION IMPLEMENTED**: visible=true + sprite_index=-1 for UI objects without sprites
 - Clock: Always visible, static positioning for consistent visibility
 - Money: Now properly visible at top-left with icon display (was completely invisible)
-- Schedule: Now properly visible at bottom-left, static display for gameplay awareness
-- Needs: TAB-toggleable slider bars with color-coding, warning flashes and tooltip system
+- Schedule: TAB-toggleable slide animation from left, matching needs panel behavior
+- Needs: TAB-toggleable slide animation from right with color-coding, warning flashes and tooltip system
 - Debug Tools: Enhanced with F1 key + NEW F10 key for UI visibility diagnostics
 - **TECHNICAL DEBT ELIMINATED**: No more invisible UI elements, comprehensive debugging added
-- **LATEST**: UI Layout Improvements - Fixed legend overlap, consolidated activity display to clock, improved coin icon visibility
+- **LATEST**: Schedule Slide Animation Feature - Both schedule and needs panels slide in/out with TAB key
 
 ### Current Focus: Foundation Systems Implementation
 **Next Priority**: Time System (SOL-001) and Save/Load System (SOL-003)
@@ -189,6 +189,19 @@ Finished tasks with all acceptance criteria met
 
 ### ✅ COMPLETE
 
+- **UI-014: Schedule Slide Animation Feature** ✓
+  - Epic: UI Polish & Fixes
+  - Implemented TAB-triggered slide animation for schedule panel matching needs panel behavior
+  - Schedule slides in from left (position -650 to +20) with smooth easing animation
+  - Needs panel continues to slide in from right (off-screen to gui_width - 250)
+  - Both panels use unified 0.3 second animation duration with ease-in-out timing
+  - Enhanced user experience with consistent animation behavior across UI elements
+  - Improved screen space management with coordinated show/hide functionality
+  - Maintained static clock and money displays for persistent visibility
+  - Professional animation system provides polished interaction feedback
+  - Completed: 2025-09-20 Day 4 (Latest Feature)
+  - All acceptance criteria met
+
 - **UI-013: UI Layout Improvements - Legend, Activity Display, and Icon Fixes** ✓
   - Epic: UI Polish & Fixes
   - Fixed legend overlap issue that was obscuring schedule information
@@ -231,14 +244,12 @@ Finished tasks with all acceptance criteria met
 
 - **UI-010: Schedule Simplification and Static Display** ✓
   - Epic: UI Polish & Fixes
-  - Removed schedule animation system for simplified UX
-  - Restored schedule to static display for constant visibility
-  - Maintained TAB-toggle functionality for needs bars only
+  - NOTE: This task was superseded by UI-014 which restored animation functionality
+  - Initial attempt to remove schedule animation system for simplified UX
   - Clock positioning returned to static for consistency
-  - Improved gameplay awareness with always-visible schedule
-  - Reduced UI complexity while maintaining core functionality
   - Enhanced focus on core gameplay mechanics
-  - Completed: 2025-09-20 Day 4 (Latest)
+  - Status: Superseded by UI-014 (Schedule animation restored with improved implementation)
+  - Completed: 2025-09-20 Day 4 (Superseded)
   - All acceptance criteria met
 
 - **UI-009: Clock and Schedule Animation Fix** ✓
@@ -534,12 +545,13 @@ Finished tasks with all acceptance criteria met
 
 ### Epic: UI Polish & Fixes
 **Description**: Critical UI visibility and positioning fixes
-**Tasks**: UI-001 through UI-013
+**Tasks**: UI-001 through UI-014
 **Status**: COMPLETED 2025-09-20 (All UI layout and visibility issues resolved)
 **Priority**: High (Critical for playability) - RESOLVED
 **Impact**:
 - Discovered and documented visible=false vs sprite_index=-1 pattern for future development
 - Achieved clean, non-overlapping UI layout with consolidated activity display
+- Implemented coordinated TAB-toggle slide animations for both schedule and needs panels
 - Established stable UI foundation for core gameplay implementation
 
 ### Epic: Polish & UX
