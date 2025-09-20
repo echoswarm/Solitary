@@ -145,47 +145,37 @@ Finished tasks with all acceptance criteria met
 
 ### 🚀 IN PROGRESS
 
-- **SPRINT3-001: Character Visibility Fix**
-  - Epic: Sprint 3 GML Implementation
-  - Fix obj_inmate and obj_guard Draw events
-  - Add draw_self() to make characters visible
-  - Verify sprite assignments
-  - Estimated: 30 minutes
-  - Priority: CRITICAL (P0 - Blocker)
+- **SOL-002: Game State Controller**
+  - Epic: Foundation Systems
+  - Create obj_game_controller
+  - Implement state machine (Menu/Playing/Paused/End)
+  - Set up main game loop
+  - Handle system updates each tick
+  - Estimated: 4 hours
+  - Priority: Must-Have (P1)
   - Dependencies: None
-  - Started: 2025-09-19
+  - Started: 2025-09-19 Day 2
   - Acceptance Criteria:
-    - Inmate visible in cell
-    - Guard visible at station
-    - Sprites display correctly
+    - All states transition correctly
+    - Systems update in correct order
+    - No memory leaks between states
+    - Proper initialization/cleanup
 
-- **SPRINT3-002: Door Animation Fix**
-  - Epic: Sprint 3 GML Implementation
-  - Stop continuous animation loop
-  - Add image_speed = 0 in Create event
-  - Implement interaction system
-  - Estimated: 30 minutes
-  - Priority: HIGH (P1)
-  - Dependencies: None
-  - Started: 2025-09-19
+- **SOL-004: Daily Schedule System**
+  - Epic: Core Gameplay
+  - Create obj_schedule_system
+  - Implement 24-hour schedule grid
+  - Fixed activities (Sleep/Eat/Clean/Yard/Free)
+  - Visual schedule display with current activity
+  - Estimated: 4 hours
+  - Priority: Must-Have (P2)
+  - Dependencies: Time System
+  - Started: 2025-09-19 Day 2
   - Acceptance Criteria:
-    - Doors static by default
-    - Can interact with E key
-    - Open/close states work
-
-- **SPRINT3-003: Clock Display Implementation**
-  - Epic: Sprint 3 GML Implementation
-  - Add time display to Draw_64.gml
-  - Show "Day X - HH:MM" format
-  - Position at top center
-  - Estimated: 1 hour
-  - Priority: HIGH (P1)
-  - Dependencies: None
-  - Started: 2025-09-19
-  - Acceptance Criteria:
-    - Clock visible on screen
-    - Shows current day and time
-    - Updates every frame
+    - Schedule triggers at correct hours
+    - Current activity clearly indicated
+    - All activities have defined time slots
+    - Visual grid shows full day schedule
 
 ### 👀 REVIEW
 
@@ -204,6 +194,30 @@ Finished tasks with all acceptance criteria met
   - Assigned: gamemaker-ide-specialist
 
 ### ✅ COMPLETE
+
+- **SPRINT3-001: Character Visibility Fix** ✓
+  - Epic: Sprint 3 GML Implementation
+  - Fixed obj_inmate and obj_guard Draw events
+  - Added draw_self() to make characters visible
+  - Verified sprite assignments working
+  - Completed: 2025-09-19 Day 1
+  - All acceptance criteria met
+
+- **SPRINT3-002: Door Animation Fix** ✓
+  - Epic: Sprint 3 GML Implementation
+  - Stopped continuous animation loop
+  - Added image_speed = 0 in Create event
+  - Implemented interaction system
+  - Completed: 2025-09-19 Day 1
+  - All acceptance criteria met
+
+- **SPRINT3-003: Clock Display Implementation** ✓
+  - Epic: Sprint 3 GML Implementation
+  - Added time display to Draw_64.gml
+  - Shows "Day X - HH:MM" format
+  - Positioned at top center
+  - Completed: 2025-09-19 Day 1
+  - All acceptance criteria met
 
 - **INIT-004: GameMaker Object Creation and Sync** ✓
   - Created all game objects in IDE
