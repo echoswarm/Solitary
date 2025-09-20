@@ -1,13 +1,13 @@
 {
-  "$GMScript":"v1",
-  "%Name":"scr_validate_ui_fix",
+  "$GMScript":"",
+  "%Name":"scr_debug_ui_visibility",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_validate_ui_fix",
+  "name":"scr_debug_ui_visibility",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
-  "resourceVersion":"2.0",
+  "resourceVersion":"2.0"
 }

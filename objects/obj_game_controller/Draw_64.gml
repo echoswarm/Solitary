@@ -32,6 +32,9 @@ switch(current_state) {
         break;
 
     case GameState.PLAYING:
-        // No overlay when playing
+        // Debug UI visibility (press F1 to show)
+        if (keyboard_check_pressed(vk_f1)) {
+            debug_ui_visibility();
+        }
         break;
 }

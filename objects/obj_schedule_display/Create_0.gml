@@ -1,7 +1,7 @@
 // obj_schedule_display Create Event
 
-// Hide the sprite object in top-right (only show the grid display on bottom-left)
-visible = false;
+// Keep object visible so Draw GUI event runs
+visible = true;
 
 // Define activities
 enum Activity {

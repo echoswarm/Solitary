@@ -33,5 +33,5 @@ schedule_display = noone;
 // Last hour tracked (for decay)
 last_hour = -1;
 
-// Hide the sprite since we're using tooltips now
-visible = false;
+// Keep object visible so Draw GUI event runs
+visible = true;
