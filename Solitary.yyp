@@ -67,6 +67,7 @@
     {"id":{"name":"scr_time_functions","path":"scripts/scr_time_functions/scr_time_functions.yy",},},
     {"id":{"name":"scr_validate_ui_fix","path":"scripts/scr_validate_ui_fix/scr_validate_ui_fix.yy",},},
     {"id":{"name":"scr_verify_ui","path":"scripts/scr_verify_ui/scr_verify_ui.yy",},},
+    {"id":{"name":"scr_verify_ui_visibility","path":"scripts/scr_verify_ui_visibility/scr_verify_ui_visibility.yy",},},
     {"id":{"name":"spr_cell_tileset","path":"sprites/spr_cell_tileset/spr_cell_tileset.yy",},},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},},
     {"id":{"name":"spr_food_tray","path":"sprites/spr_food_tray/spr_food_tray.yy",},},

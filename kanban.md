@@ -15,7 +15,7 @@ This kanban board tracks all development tasks for the Solitary GameMaker projec
 - Needs: TAB-toggleable slider bars with color-coding, warning flashes and tooltip system
 - Debug Tools: Enhanced with F1 key + NEW F10 key for UI visibility diagnostics
 - **TECHNICAL DEBT ELIMINATED**: No more invisible UI elements, comprehensive debugging added
-- **LATEST**: Critical UI Visibility Fix - All UI elements now properly visible and functional
+- **LATEST**: UI Layout Improvements - Fixed legend overlap, consolidated activity display to clock, improved coin icon visibility
 
 ### Current Focus: Foundation Systems Implementation
 **Next Priority**: Time System (SOL-001) and Save/Load System (SOL-003)
@@ -189,6 +189,18 @@ Finished tasks with all acceptance criteria met
 
 ### ✅ COMPLETE
 
+- **UI-013: UI Layout Improvements - Legend, Activity Display, and Icon Fixes** ✓
+  - Epic: UI Polish & Fixes
+  - Fixed legend overlap issue that was obscuring schedule information
+  - Consolidated activity display to clock for cleaner, unified time/activity information
+  - Fixed coin icon visibility ensuring proper money display rendering
+  - Enhanced overall UI clarity and reduced visual clutter
+  - Improved user experience with streamlined information display
+  - Resolved display conflicts between overlapping UI elements
+  - Optimized screen real estate usage for better gameplay visibility
+  - Completed: 2025-09-20 Day 4 (Latest)
+  - All acceptance criteria met
+
 - **UI-012: Critical UI Visibility Fix - GameMaker visible Property Discovery** ✓
   - Epic: UI Polish & Fixes
   - **CRITICAL DISCOVERY**: visible=false prevents ALL drawing including Draw_64 events
@@ -202,7 +214,7 @@ Finished tasks with all acceptance criteria met
   - **KEY LESSON**: To hide sprite but keep Draw_64 active: use visible=true + sprite_index=-1
   - **IMPACT**: Resolved complete UI invisibility issue, restored all UI displays
   - Enhanced debugging infrastructure for future UI troubleshooting
-  - Completed: 2025-09-20 Day 4 (Latest - Critical Fix)
+  - Completed: 2025-09-20 Day 4 (Critical Fix)
   - All acceptance criteria met
 
 - **UI-011: UI Display Fixes and Sprite Cleanup** ✓
@@ -522,10 +534,13 @@ Finished tasks with all acceptance criteria met
 
 ### Epic: UI Polish & Fixes
 **Description**: Critical UI visibility and positioning fixes
-**Tasks**: UI-001, UI-002, UI-003, UI-004, UI-005, UI-006, UI-007, UI-008, UI-009, UI-010, UI-011, UI-012
-**Status**: COMPLETED 2025-09-20 (Critical visibility fix resolved fundamental GameMaker issue)
+**Tasks**: UI-001 through UI-013
+**Status**: COMPLETED 2025-09-20 (All UI layout and visibility issues resolved)
 **Priority**: High (Critical for playability) - RESOLVED
-**Impact**: Discovered and documented visible=false vs sprite_index=-1 pattern for future development
+**Impact**:
+- Discovered and documented visible=false vs sprite_index=-1 pattern for future development
+- Achieved clean, non-overlapping UI layout with consolidated activity display
+- Established stable UI foundation for core gameplay implementation
 
 ### Epic: Polish & UX
 **Description**: Visual feedback, audio, and quality of life improvements

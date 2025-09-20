@@ -30,7 +30,10 @@
       "Bash(cmd /c:*)",
       "Bash(find:*)",
       "Bash(awk:*)",
-      "Bash(while read file)"
+      "Bash(while read file)",
+      "Bash(del nul)",
+      "Bash(while read f)",
+      "Bash(do basename \"$f\" .yy)"
     ],
     "deny": [],
     "ask": []
