@@ -25,7 +25,9 @@
       "Bash(echo:*)",
       "Bash(for:*)",
       "Bash(findstr:*)",
-      "Bash(gamemaker-project-sync:*)"
+      "Bash(gamemaker-project-sync:*)",
+      "Bash(C:ProgramDataGameMakerStudio2Cacheruntimesruntime-2024.8.1.218binIgor.exe -options=C:UsersquinnAppDataLocalGameMakerStudio2GMS2TEMPbuild.bff -- Windows Run)",
+      "Bash(cmd /c:*)"
     ],
     "deny": [],
     "ask": []

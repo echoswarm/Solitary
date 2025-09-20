@@ -12,7 +12,7 @@ seconds_per_minute = 1;
 
 // Display position (centered on top UI bar)
 clock_x = 640;
-clock_y = 20;
+clock_y = 30;
 
 // Game state
 paused = false;

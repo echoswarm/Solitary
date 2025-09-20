@@ -12,11 +12,11 @@ cleanliness_decay = 4;   // Lose 4 cleanliness per hour
 hunger_restore = 60;     // Eating restores 60 hunger
 cleanliness_restore = 70; // Cleaning restores 70 cleanliness
 
-// Display settings (left side of top UI bar after schedule)
-display_x = 250;  // Position on left side of top bar
-display_y = 10;
-bar_width = 200;
-bar_height = 20;
+// Display settings (top right area near money)
+display_x = 900;  // Position at top right area
+display_y = 30;
+bar_width = 80;
+bar_height = 10;
 bar_spacing = 30;
 
 // Warning thresholds
